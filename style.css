@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@400;700&family=Montserrat:wght@300;500;600;700&display=swap");
+
+:root {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  padding: 4rem;
+  padding-top: 3rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* align-content: space-between; */
+  margin-bottom: 10rem;
+}
+
+.brand-name {
+  font-family: "Crimson Pro", sans-serif;
+  font-weight: 200;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  border: 0.1rem solid #ffffff;
+}
+
+.navigation {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-item {
+  margin-right: 4rem;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  font-weight: 500;
+}
+
+.nav-selected {
+  font-weight: bold;
+}
+
+.navigation:last-child {
+  margin-right: 0;
+}
+
+.mobile-nav {
+  display: none;
+  cursor: pointer;
+  z-index: 21;
+}
+
+.mobile-nav-bar-1,
+.mobile-nav-bar-2,
+.mobile-nav-bar-3 {
+  width: 3rem;
+  height: 0.3rem;
+  background-color: #fff;
+  margin: 0.6rem 0;
+  transition: 0.4s;
+}
+
+.change .mobile-nav-bar-1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .mobile-nav-bar-2 {
+  opacity: 0;
+}
+
+.change .mobile-nav-bar-3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.mobile-overlay {
+  height: 100%;
+  display: grid;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+.mobile-navigation {
+  margin: auto;
+  list-style-type: none;
+  text-align: center;
+}
+
+.mobile-navigation > li {
+  margin-bottom: 4rem;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 35vh;
+}
+
+.text {
+  max-width: 30vw;
+}
+
+.text-heading {
+  font-family: Lora, serif;
+  font-weight: normal;
+  font-size: 4.8rem;
+  line-height: 6.1rem;
+  margin-bottom: 3rem;
+}
+
+.text-content {
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  margin-bottom: 4rem;
+}
+
+.text-read-more {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+
+.showcase {
+  position: relative;
+}
+
+.showcase-img {
+  max-width: 55vw;
+}
+
+.showcase-card {
+  position: absolute;
+  background-color: #000;
+  bottom: 0;
+  right: 2.5vw;
+  width: 35vw;
+  height: 20vh;
+  padding: 3rem;
+  padding-top: 2rem;
+  z-index: 10;
+}
+
+.showcase-designer-profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+.showcase-card-avatar {
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 50%;
+  margin-right: 3rem;
+}
+
+.showcase-card-name {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.showcase-card-title {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+
+  color: #828282;
+}
+
+.showcase-card-text {
+  font-family: Lora, serif;
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+}
+
+footer {
+  position: relative;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: #a9a9a9;
+}
+
+@media screen and (max-width: 60rem) {
+  :root {
+    font-size: 50%;
+  }
+
+  body {
+    padding: 2rem;
+    padding-top: 1.5rem;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: inline-block;
+  }
+
+  .content-container {
+    display: block;
+    margin-bottom: 18vh;
+  }
+
+  .header {
+    margin-bottom: 4rem;
+  }
+
+  .text {
+    max-width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .text-content {
+    max-width: 60%;
+    margin-bottom: 4rem;
+  }
+
+  .showcase-img {
+    max-width: 90vw;
+  }
+
+  .showcase-card {
+    position: absolute;
+    background-color: #000;
+    bottom: -15vh;
+    right: 5vw;
+    width: 80vw;
+    height: 20vh;
+    padding: 3rem;
+    padding-top: 2rem;
+  }
+
+  .showcase-designer-profile {
+    margin-bottom: 3rem;
+  }
+
+  .showcase-card-avatar {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+  }
+
+  .showcase-card-text {
+    max-width: 80%;
+  }
+
+  footer {
+    border-top: 0.1rem solid #a9a9a9;
+    padding: 1rem;
+    margin: 5rem;
+    margin-bottom: 0;
+  }
+}

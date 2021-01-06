@@ -1,95 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1,
-  maximum-scale=5"
-    />
-
-    <link rel="icon" href="devchallenges.png" />
-
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://devchallenges.io/"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>Devchallenges</title>
-
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-
-      ul {
-        padding-left: 24px;
-      }
-
-      li {
-        margin-bottom: 8px;
-      }
-
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
-
-      .welcome-text p {
-        font-size: 1rem;
-        font-weight: 400;
-      }
-
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
-
-      .welcome-text a {
-        color: #f7542e;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>THIS INTERIOR</title>
   </head>
   <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
+    <header class="header">
+      <h1 class="brand-name">This Design</h1>
+      <nav class="desktop-nav">
+        <ul class="navigation">
+          <li class="nav-item nav-selected">Home</li>
+          <li class="nav-item">Collection</li>
+          <li class="nav-item">About</li>
+          <li class="nav-item">Contact</li>
+        </ul>
+      </nav>
+      <nav class="mobile-nav">
+        <div class="mobile-nav-bar-1"></div>
+        <div class="mobile-nav-bar-2"></div>
+        <div class="mobile-nav-bar-3"></div>
+      </nav>
+    </header>
 
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
+    <div class="mobile-wrapper hidden">
+      <div class="mobile-overlay">
+        <ul class="mobile-navigation">
+          <li class="nav-item nav-selected">Home</li>
+          <li class="nav-item">Collection</li>
+          <li class="nav-item">About</li>
+          <li class="nav-item">Contact</li>
+        </ul>
       </div>
-
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
     </div>
+
+    <main class="content-container">
+      <section class="text">
+        <h2 class="text-heading">Modern Interior</h2>
+        <p class="text-content">
+          A full-Service residential & commercial interior design and staging
+          company offering professional organizing & eco-services.
+        </p>
+        <div class="text-read-more">Read more →</div>
+      </section>
+      <section class="showcase">
+        <div class="showcase-img-container">
+          <img
+            src="photo1.png"
+            alt="Living room by This Interior"
+            class="showcase-img"
+          />
+        </div>
+        <div class="showcase-card">
+          <div class="showcase-designer-profile">
+            <img
+              src="photo2.png"
+              alt="Aliza Webber - Interior Designer"
+              class="showcase-card-avatar"
+            />
+            <div class="showcase-designer-details">
+              <h3 class="showcase-card-name">Aliza Webber</h3>
+              <h4 class="showcase-card-title">Interior Designer</h4>
+            </div>
+          </div>
+          <p class="showcase-card-text">Designed in 2020 by Aliza Webber</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>Nikolay Rademacher</footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
